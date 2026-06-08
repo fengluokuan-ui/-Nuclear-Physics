@@ -1,0 +1,118 @@
+\documentclass[12pt,a4paper]{ctexart}
+
+\usepackage[a4paper,margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{physics}
+\usepackage{setspace}
+\usepackage{caption}
+
+\hypersetup{
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=blue,
+	urlcolor=blue,
+	pdftitle={无中微子双\texorpdfstring{$\beta$}{beta}衰变课程论文},
+	pdfauthor={姓名}
+}
+
+\title{无中微子双\texorpdfstring{$\beta$}{beta}衰变}
+\author{}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+请在此处填写摘要。建议用一段话概括研究背景、核心问题、主要方法和结论。
+\end{abstract}
+
+\noindent\textbf{关键词：}关键词1；关键词2；关键词3；关键词4
+
+\tableofcontents
+
+\newpage
+\onehalfspacing
+
+\section{引言}
+
+请在此处介绍选题背景、研究意义、国内外研究现状，以及本文的组织结构。
+
+\section{物理背景与研究意义}
+
+\subsection{为什么无中微子双\texorpdfstring{$\beta$}{beta}衰变重要}
+
+请在此处说明该过程与 Majorana 中微子、轻子数不守恒、中微子质量等问题的关系。
+
+\subsection{候选核素}
+
+请在此处介绍常见候选核素、选择标准以及它们在实验中的特点。
+
+\section{理论机制}
+
+\subsection{轻 Majorana 中微子交换机制}
+
+请在此处写理论机制，并根据需要插入公式。下面保留了一个常用公式模板：
+\begin{equation}
+	\left[T_{1/2}^{0\nu}\right]^{-1} = G^{0\nu}(Q,Z)\,\left|M^{0\nu}\right|^2\,\left|\frac{m_{\beta\beta}}{m_e}\right|^2,
+	\label{eq:half-life}
+\end{equation}
+如果你需要给出有效 Majorana 质量定义，可以继续使用下式：
+\begin{equation}
+	m_{\beta\beta} = \left|\sum_i U_{ei}^2 m_i\right|
+\end{equation}
+请在此处解释公式中各物理量的意义，并说明其物理图像。
+
+\subsection{其他可能的新物理机制}
+
+请在此处补充其他可能机制，例如右手流、重中微子交换或其他超出标准模型情形。
+
+\section{核矩阵元问题}
+
+请在此处讨论核矩阵元的理论计算方法、主要不确定性来源及其对实验解释的影响。
+
+\section{实验进展}
+
+请在此处整理代表性实验、实验方法、当前半衰期下限以及未来计划。
+
+\begin{table}[htbp]
+	\centering
+	\caption{候选核素与实验要点模板表}
+	\begin{tabular}{cccc}
+		\toprule
+		核素 & 典型实验 & 优势 & 关注点 \\
+		\midrule
+		请填写 & 请填写 & 请填写 & 请填写 \\
+		请填写 & 请填写 & 请填写 & 请填写 \\
+		请填写 & 请填写 & 请填写 & 请填写 \\
+		请填写 & 请填写 & 请填写 & 请填写 \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\section{结果讨论与展望}
+
+请在此处总结理论与实验现状，讨论存在的问题、争议点和未来发展方向。
+
+\section{结论}
+
+请在此处概括全文的主要观点与结论。
+
+\section*{附：写作提示}
+
+如果你要把这份模板扩展成正式作业，建议优先补充以下内容：
+\begin{enumerate}
+	\item 将封面中的姓名、学号、院系和日期改为你的个人信息；
+	\item 用你自己的正文替换各节中的提示文字；
+	\item 若不需要某个小节或表格，可直接删除；
+	\item 若使用文献引用，请在 .bib 文件中维护你的参考文献条目；
+	\item 编译顺序建议为 XeLaTeX $\to$ BibTeX $\to$ XeLaTeX $\to$ XeLaTeX。
+\end{enumerate}
+
+\bibliographystyle{unsrt}
+\bibliography{nuclear-physicsNotes}
+
+\end{document}
