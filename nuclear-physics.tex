@@ -225,6 +225,49 @@ $m_{\beta\beta}$ 不是唯一的中微子质量观测量。直接 $\beta$ 衰变
 
 \section{半衰期公式与核矩阵元}
 
+\subsection{标准半衰期公式与有效Majorana质量}
+
+无中微子双贝塔衰变（$0\nu\beta\beta$）的半衰期是连接实验观测与粒子物理参数的核心纽带。在标准轻Majorana中微子交换机制主导的假设下，半衰期 $T_{1/2}^{0\nu}$ 的倒数可表示为几个因子的乘积~\cite{GomezCadenas2023,Engel2017}：
+\begin{equation}
+\left(T_{1/2}^{0\nu}\right)^{-1} = G^{0\nu}(Q,Z) \cdot g_A^4 \cdot \left| M^{0\nu} \right|^2 \cdot \left( \frac{m_{\beta\beta}}{m_e} \right)^2 \label{eq:halflife}
+\end{equation}
+该公式清晰地体现了问题的跨尺度性质。其中：
+\begin{enumerate}
+\item \textbf{相空间因子 $G^{0\nu}(Q,Z)$}：描述衰变释放的两个电子的相体积。它主要取决于衰变能 $Q_{\beta\beta}$ 和子核的原子序数 $Z$，可以通过量子电动力学精确计算，不确定性很小~\cite{GomezCadenas2023}。
+\item \textbf{轴矢耦合常数 $g_A$}：表征核子层次弱相互作用的强度。其自由核子值约为 $g_A \simeq 1.27$，但在核介质中会发生“淬灭”（quenching），是理论不确定性的主要来源之一。
+\item \textbf{核矩阵元 $M^{0\nu}$}：描述衰变过程中初态 $(A,Z)$ 和末态 $(A,Z+2)$ 两个原子核波函数之间的跃迁振幅。它编码了强相互作用在核尺度上的复杂关联效应，是当前理论计算的核心与瓶颈。
+\item \textbf{有效Majorana质量 $m_{\beta\beta}$}：这是粒子物理层面的目标参数。对于轻中微子交换机制，其定义为PMNS混合矩阵元和中微子质量本征值的组合：
+\begin{equation}
+m_{\beta\beta} = \left| \sum_{i=1}^{3} U_{ei}^2 m_i \right| \label{eq:meff}
+\end{equation}
+由于Majorana相位 $\alpha_i$ 的存在，$m_{\beta\beta}$ 可以是相长或相消干涉的结果，因此即使中微子是Majorana粒子，$m_{\beta\beta}$ 也可能非常小。
+\end{enumerate}
+从公式~\eqref{eq:halflife} 可知，一旦实验给出半衰期下限 $T_{1/2}^{0\nu} > T_{\mathrm{lim}}$，即可反推出 $m_{\beta\beta}$ 的上限：
+\begin{equation}
+m_{\beta\beta} < \frac{m_e}{g_A^2 |M^{0\nu}|} \sqrt{\frac{1}{G^{0\nu} T_{\mathrm{lim}}}} \label{eq:mlimit}
+\end{equation}
+这表明，核矩阵元 $M^{0\nu}$ 的计算精度直接决定了从实验极限提取 $m_{\beta\beta}$ 上限的可靠性，或未来发现信号时确定中微子质量尺度的准确性。
+
+\subsection{核矩阵元的复杂结构}
+
+$0\nu\beta\beta$ 的核矩阵元远比单 $\beta$ 衰变复杂，因为它涉及两个核子同时发生弱相互作用，并通过交换一个虚中微子耦合。从微观有效理论出发，核矩阵元可分解为费米（Fermi, F）、伽莫夫-泰勒（Gamow-Teller, GT）和张量（Tensor, T）三项的贡献~\cite{Engel2017,GomezCadenas2023}：
+\begin{equation}
+M^{0\nu} = M_{GT}^{0\nu} - \left(\frac{g_V}{g_A}\right)^2 M_{F}^{0\nu} + M_T^{0\nu} \label{eq:Mdecomp}
+\end{equation}
+在长程轻中微子交换机制下，这些分量的具体形式可写为两体算符在初、末态核波函数之间的期待值：
+\begin{equation}
+M_{K}^{0\nu} = \frac{2R}{\pi} \langle \Psi_f | \sum_{m<n} \tau_m^+ \tau_n^+ \int_0^\infty j_\lambda(q r_{mn}) \frac{h_K(q^2)}{q + \bar{E} - (E_i+E_f)/2} \mathcal{O}_K(m,n) \, dq \, | \Psi_i \rangle \label{eq:Mlong}
+\end{equation}
+其中 $R$ 是核半径，$\tau^+$ 是同位旋升算符，$j_\lambda(q r)$ 是球贝塞尔函数（$\lambda=0$ 对应 $F$ 和 $GT$ 项，$\lambda=2$ 对应 $T$ 项），$r_{mn}$ 是两核子间的距离，$\bar{E}$ 是闭合近似下的平均激发能。算符 $\mathcal{O}_K$ 对 $F$ 项为单位算符 $\mathbb{I}$，对 $GT$ 项为 $\sigma_m\cdot\sigma_n$，对 $T$ 项为张量算符 $S_{mn}=3(\hat{r}\cdot\sigma_m)(\hat{r}\cdot\sigma_n)-\sigma_m\cdot\sigma_n$。中微子势 $h_K(q^2)$ 包含了矢量、轴矢、弱磁和赝标量形状因子，体现了弱流在核子层次的复杂结构。
+
+\subsection{核矩阵元：从基本输入到主要瓶颈}
+
+$0\nu\beta\beta$ 衰变的特殊之处在于，其虚中微子传递的典型动量 $q\sim 100-200\ \mathrm{MeV}$，远大于核低能激发能，却与核子内部的费米动量尺度相当。因此，NME 的计算对核波函数的细节极为敏感，尤其是短程核关联、形变、对关联以及同位旋混合等效应。
+
+对 $^{76}\mathrm{Ge}$、$^{136}\mathrm{Xe}$ 等中重核，完整求解核多体问题在计算上极具挑战。当前主要采用包括核壳模型（SM）、准粒子无规相位近似（QRPA）、能量密度泛函理论结合生成坐标法（EDF-GCM）以及相互作用玻色子模型（IBM）等不同方法~\cite{Engel2017}。这些方法在模型空间、有效相互作用和处理集体关联的方式上各有取舍，导致对同一核素的 $M^{0\nu}$ 预测值存在约2–3倍的差异~\cite{GomezCadenas2023}。这种巨大的理论不确定性，直接转化为从半衰期反推 $m_{\beta\beta}$ 时近一个数量级的不确定性，已成为当前制约 $0\nu\beta\beta$ 物理潜力的最主要理论瓶颈。
+
+此外，普遍存在于核模型中的 $g_A$ 淬灭问题（即计算出的单 $\beta$ 和 $2\nu\beta\beta$ 跃迁强度普遍大于实验值）也为 $0\nu\beta\beta$ 的预测蒙上阴影。淬灭的根源可能来自模型空间截断导致的多体关联缺失，也可能来自 $\Delta$ 共振态等非核子自由度的贡献~\cite{Engel2017}。理解其物理本质并统一处理其在 $0\nu\beta\beta$ 中的影响，是当前核理论研究的核心课题之一
+
 \section{实验研究现状}
 
 \section{研究进展一：格点 QCD}
@@ -413,7 +456,53 @@ N$^2$LO 修正虽非主导项，但已经达到下一代实验解释不能随意
 
 更重要的是，pnQRPA 与 NSM 的符号差异说明，不同多体方法之间的差异不只体现在总 NME 大小上，也体现在中间态 running sum 和高阶修正的符号上。未来若要降低理论误差，需要进一步理解中间态谱、短程低能常数、regulator 依赖和两体弱流的影响。对于从实验半衰期提取 $m_{\beta\beta}$ 而言，N$^2$LO 的 $5$--$15\%$ NME 修正会转化为有效质量约束中的系统误差，因此必须纳入严肃的理论误差预算。
 
-\section{研究进展三：MR-CDFT 多机制 NME}
+\section{研究进展三：MR-CDFT 多机制 NME（Ding et al. 2024）}
+
+\subsection{研究目标与动机}
+
+当下一代实验将灵敏度推进至 $10^{27-28}$ 年量级时，一旦发现信号，首要问题便是：是什么机制驱动了 $0\nu\beta\beta$ 衰变？是标准的光Majorana中微子交换，还是某种非标准的长程或短程新物理过程？由 Ding、Li 和 Yao 于 2024 年发表的论文《Nuclear matrix elements of neutrinoless double-beta decay in covariant density functional theory with different mechanisms》~\cite{Ding2024} 正是为回答这一问题而开展的系统性理论研究。
+
+该工作的核心目标是：在手征有效场论的框架下，采用统一的多参考协变密度泛函理论（MR-CDFT）波函数，系统地计算五个重要候选核素（$^{76}\mathrm{Ge}$、$^{82}\mathrm{Se}$、$^{100}\mathrm{Mo}$、$^{130}\mathrm{Te}$、$^{136}\mathrm{Xe}$）在标准以及多种非标准机制下的组合核矩阵元，并探讨不同核模型不确定性对新物理参数约束的影响。
+
+\subsection{理论框架：三种机制与组合NME}
+
+该研究在手征EFT的指导下，将 Leading-order 的轻子数破坏跃迁势分为三类~\cite{Ding2024}：
+\begin{itemize}
+\item \textbf{Type-I（标准机制）}：由轻Majorana中微子交换主导，其强度由有效质量 $m_{\beta\beta}$ 控制。
+\item \textbf{Type-II（长程非标准机制）}：来源于动量依赖的长程 LNV 相互作用，对应不同的洛伦兹结构。
+\item \textbf{Type-III（短程机制）}：由高能新物理（如重中微子交换）在低能标下产生的接触相互作用主导。
+\end{itemize}
+NME 不是单一数值，而是需要根据具体机制和轻子结构（$L,R,m_e,E,M$）进行组合。例如，标准机制的振幅 $\mathcal{A}_L$ 被表示为：
+\begin{equation}
+\begin{aligned}
+\mathcal{A}_L = \frac{m_{\beta\beta}}{m_e}&\left(M_L^{\mathrm{I,NN}} + M_L^{\mathrm{I},\pi N} + M_L^{\mathrm{I},\pi\pi}\right) \\
+&+ \sum_i C_i^{\mathrm{II,III}} M_i^{\mathrm{II,III}}
+\end{aligned}
+\label{eq:Alarge}
+\end{equation}
+其中 $M_i^{a}$ 是基础 Fermi、GT 和 Tensor NME 的特定线性组合，而 $C_i$ 是待定的无量纲 LNV 系数。因此，计算的关键在于首先获得基础 NME 分量，再按机制需求进行组合。
+
+\subsection{MR-CDFT 方法及其优势}
+
+MR-CDFT 是一种处理中重核集体关联的强大工具。它从相对论点耦合密度泛函 PC-PK1 出发，通过以下几个步骤构建初、末态 $0^+$ 波函数~\cite{Ding2024}：
+\begin{enumerate}
+\item \textbf{约束平均场计算}：生成一系列具有不同形变（四极、八极等）的参考态。
+\item \textbf{对称性恢复}：对每个参考态进行角动量和粒子数投影，得到具有确定好量子数的态。
+\item \textbf{生成坐标混合}：将投影后的态作为基矢，通过求解 Hill-Wheeler 方程进行组态混合，从而描述集体关联和形状共存。
+\end{enumerate}
+相较于传统的壳模型或 QRPA，MR-CDFT 能够更自然地处理中重核中普遍存在的形变效应，并在统一的框架下自洽地描述母核与子核，这使其成为计算多核素、多机制 NME 的理想平台。
+
+\subsection{主要结论与意义}
+
+该研究的主要发现和贡献可以概括为以下几点：
+\begin{enumerate}
+\item \textbf{组合NME的模型依赖性}：虽然单个NME分量在不同模型中差异巨大，但按特定费曼图组合后的 NME 在一定程度上缩小了分歧。然而，对于 $^{136}\mathrm{Xe}$，不同模型（MR-CDFT, SM, sQRPA, IBM2）给出的组合NME仍存在约2–4倍的差异（见文献~\cite{Ding2024} 图4），表明非标准机制的核不确定性丝毫不亚于标准机制。
+\item \textbf{对新物理参数的约束}：利用 KamLAND-Zen 实验对 $^{136}\mathrm{Xe}$ 的最新半衰期下限，该工作推导了 $m_{\beta\beta}/m_e$ 及各 LNV 系数 $C_i$ 的上限。结果显示，MR-CDFT 由于其预测的 NME 值通常较大，因而给出了最为严格的参数空间限制（见文献~\cite{Ding2024} 图5）。
+\item \textbf{机制间的相干效应}：研究系统分析了标准机制与非标准机制之间的干涉图样。例如，与振幅 $\mathcal{A}_L$ 贡献相关的系数（如 $C_{3L}^{\mathrm{II}}$）与 $m_{\beta\beta}$ 呈现出线性相关，而与 $\mathcal{A}_{m_e}$ 等贡献相关的系数则呈现出椭圆状的相关区域（见文献~\cite{Ding2024} 图6）。这种相关性分析为未来通过多观测量联合分析来甄别新物理机制提供了理论依据。
+\item \textbf{连接理论与实验}：该工作不仅计算了 NME，还将低能 LNV 系数与 SMEFT 的 Wilson 系数联系起来，从而建立了从核实验半衰期到高能新物理尺度 $\Lambda$ 的映射。
+\end{enumerate}
+
+\textbf{小结}：Ding 等人的工作代表了当前 $0\nu\beta\beta$ 理论研究的先进水平。它不仅是单纯的计算 NME，而是构建了一个连接“特定新物理模型 – 手征EFT算符 – 核多体波函数 – 实验观测量”的完整链条。该研究的核心信息是：未来一旦发现信号，仅凭一个核素的半衰期无法区分机制，必须依赖多核素测量、对干涉项的分析以及多个核模型的交叉验证，而 MR-CDFT 为此提供了重要的理论工具。
 
 \section{当前关键问题与展望}
 
