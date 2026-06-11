@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.22)  11 JUN 2026 16:05
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.22)  11 JUN 2026 16:22
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -985,10 +985,11 @@ File: figures/eft_fig1_running_crop.png Graphic file (type bmp)
 <figures/eft_fig1_running_crop.png>
 File: figures/eft_table1_crop.png Graphic file (type bmp)
 <figures/eft_table1_crop.png>
- [11] [12]
+ [11]
 File: figures/eft_fig2_nonclosure_crop.png Graphic file (type bmp)
 <figures/eft_fig2_nonclosure_crop.png>
- [13] (./nuclear-physics.bbl) [14] (./nuclear-physics.aux)
+ [12] (./nuclear-physics.bbl
+[13]) [14] (./nuclear-physics.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2022/07/14>
@@ -999,10 +1000,10 @@ Package rerunfilecheck Info: File `nuclear-physics.out' has not changed.
 Here is how much of TeX's memory you used:
  18627 strings out of 468168
  396069 string characters out of 5436524
- 828457 words of memory out of 5000000
+ 827335 words of memory out of 5000000
  47076 multiletter control sequences out of 15000+600000
  650157 words of font info for 150 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,11n,111p,584b,456s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,11n,111p,605b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on nuclear-physics.pdf (14 pages).

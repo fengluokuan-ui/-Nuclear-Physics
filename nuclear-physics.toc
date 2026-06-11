@@ -10,19 +10,19 @@
 \contentsline {subsection}{\numberline {3.3}质量排序与相位抵消}{7}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}与其他质量观测量的关系}{8}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}机制解释的谨慎性}{8}{subsection.3.5}%
-\contentsline {section}{\numberline {4}半衰期公式与核矩阵元}{9}{section.4}%
-\contentsline {section}{\numberline {5}实验研究现状}{9}{section.5}%
-\contentsline {section}{\numberline {6}研究进展一：格点 QCD}{9}{section.6}%
-\contentsline {section}{\numberline {7}研究进展二：手征 EFT 到 N$^2$LO}{9}{section.7}%
-\contentsline {subsection}{\numberline {7.1}为什么需要手征 EFT}{9}{subsection.7.1}%
+\contentsline {section}{\numberline {4}半衰期公式与核矩阵元}{8}{section.4}%
+\contentsline {section}{\numberline {5}实验研究现状}{8}{section.5}%
+\contentsline {section}{\numberline {6}研究进展一：格点 QCD}{8}{section.6}%
+\contentsline {section}{\numberline {7}研究进展二：手征 EFT 到 N$^2$LO}{8}{section.7}%
+\contentsline {subsection}{\numberline {7.1}为什么需要手征 EFT}{8}{subsection.7.1}%
 \contentsline {subsection}{\numberline {7.2}N$^2$LO 工作的目标与对象}{9}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}N$^2$LO 半衰期公式}{10}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}LO 长程项与 LO 短程项}{11}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}N$^2$LO ultrasoft 项}{11}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.3}N$^2$LO 半衰期公式}{9}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}LO 长程项与 LO 短程项}{10}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}N$^2$LO ultrasoft 项}{10}{subsection.7.5}%
 \contentsline {subsection}{\numberline {7.6}N$^2$LO loop 项}{11}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Table 1 的数值结果}{12}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Ultrasoft 与 non-closure correction}{13}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}物理意义与总结}{14}{subsection.7.9}%
+\contentsline {subsection}{\numberline {7.7}Table 1 的数值结果}{11}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Ultrasoft 与 non-closure correction}{12}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}物理意义与总结}{13}{subsection.7.9}%
 \contentsline {section}{\numberline {8}研究进展三：MR-CDFT 多机制 NME}{14}{section.8}%
 \contentsline {section}{\numberline {9}当前关键问题与展望}{14}{section.9}%
 \contentsline {section}{\numberline {10}结论}{14}{section.10}%
