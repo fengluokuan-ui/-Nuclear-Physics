@@ -1,13 +1,15 @@
 \begin{thebibliography}{1}
 
 \bibitem{GomezCadenas2023}
-Juan~Jos{\'e} G{\'o}mez-Cadenas, Justo Mart{\'i}n-Albo, Javier Men{\'e}ndez, Mauro Mezzetto, Francesc Monrabal, and Michel Sorel.
+Juan~Jos{\'e} G{\'o}mez-Cadenas, Justo Mart{\'i}n-Albo, Javier Men{\'e}ndez,
+  Mauro Mezzetto, Francesc Monrabal, and Michel Sorel.
 \newblock The search for neutrinoless double-beta decay.
 \newblock {\em La Rivista del Nuovo Cimento}, 46:619--692, 2023.
 
 \bibitem{Engel2017}
 Jonathan Engel and Javier Men{\'e}ndez.
-\newblock Status and future of nuclear matrix elements for neutrinoless double-beta decay: a review.
+\newblock Status and future of nuclear matrix elements for neutrinoless
+  double-beta decay: a review.
 \newblock {\em Reports on Progress in Physics}, 80(4):046301, 2017.
 
 \bibitem{SchechterValle1982}
@@ -15,14 +17,41 @@ J.~Schechter and J.~W.~F. Valle.
 \newblock Neutrinoless double-beta decay in {SU(2)} x {U(1)} theories.
 \newblock {\em Physical Review D}, 25(11):2951--2954, 1982.
 
+\bibitem{Dolinski2019}
+Michelle~J. Dolinski, Alan W.~P. Poon, and Werner Rodejohann.
+\newblock Neutrinoless double-beta decay: Status and prospects.
+\newblock {\em Annual Review of Nuclear and Particle Science}, 69:219--251,
+  2019.
+
+\bibitem{Agostini2023}
+M.~Agostini et~al.
+\newblock Toward the discovery of matter creation with neutrinoless double-beta
+  decay.
+\newblock {\em Reports on Progress in Physics}, 86(11):116301, 2023.
+
+\bibitem{Wang2024}
+Jun-Zheng Wang, Xiao Yu, and Qian Yue.
+\newblock Development and prospects of neutrinoless double-beta decay
+  experiments.
+\newblock {\em Physics}, 53(5):301--311, 2024.
+
+\bibitem{Davoudi2024}
+Zohreh Davoudi, William Detmold, Zhenghao Fu, Anthony~V. Grebe, William Jay,
+  David Murphy, Patrick Oare, Phiala~E. Shanahan, and Michael~L. Wagman.
+\newblock Long-distance nuclear matrix elements for neutrinoless double-beta
+  decay from lattice {QCD}.
+\newblock {\em arXiv preprint}, 2024.
+
 \bibitem{Castillo2025}
 Daniel Castillo, Lotta Jokiniemi, Pablo Soriano, and Javier Men{\'e}ndez.
-\newblock Neutrinoless beta beta decay nuclear matrix elements complete up to {N2LO} in heavy nuclei.
+\newblock Neutrinoless beta beta decay nuclear matrix elements complete up to
+  {N2LO} in heavy nuclei.
 \newblock {\em Physics Letters B}, 860:139181, 2025.
 
 \bibitem{Ding2024}
 Chen-rong Ding, Gang Li, and Jiang-ming Yao.
-\newblock Nuclear matrix elements of neutrinoless double-beta decay in covariant density functional theory with different mechanisms.
+\newblock Nuclear matrix elements of neutrinoless double-beta decay in
+  covariant density functional theory with different mechanisms.
 \newblock {\em Physics Letters B}, 856:138896, 2024.
 
 \end{thebibliography}

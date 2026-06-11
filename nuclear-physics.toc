@@ -15,21 +15,32 @@
 \contentsline {subsection}{\numberline {4.2}核矩阵元的复杂结构}{9}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}核矩阵元：从基本输入到主要瓶颈}{10}{subsection.4.3}%
 \contentsline {section}{\numberline {5}实验研究现状}{11}{section.5}%
-\contentsline {section}{\numberline {6}研究进展一：格点 QCD}{11}{section.6}%
-\contentsline {section}{\numberline {7}研究进展二：手征 EFT 到 N$^2$LO}{11}{section.7}%
-\contentsline {subsection}{\numberline {7.1}为什么需要手征 EFT}{11}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}N$^2$LO 工作的目标与对象}{12}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}N$^2$LO 半衰期公式}{12}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}LO 长程项与 LO 短程项}{12}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}N$^2$LO ultrasoft 项}{13}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}N$^2$LO loop 项}{14}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Table 1 的数值结果}{14}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Ultrasoft 与 non-closure correction}{15}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}物理意义与总结}{16}{subsection.7.9}%
-\contentsline {section}{\numberline {8}研究进展三：MR-CDFT 多机制 NME}{16}{section.8}%
-\contentsline {subsection}{\numberline {8.1}研究目标与动机}{16}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}理论框架：三种机制与组合NME}{16}{subsection.8.2}%
-\contentsline {subsection}{\numberline {8.3}MR-CDFT 方法及其优势}{18}{subsection.8.3}%
-\contentsline {subsection}{\numberline {8.4}主要结论与意义}{18}{subsection.8.4}%
-\contentsline {section}{\numberline {9}当前关键问题与展望}{21}{section.9}%
-\contentsline {section}{\numberline {10}结论}{21}{section.10}%
+\contentsline {subsection}{\numberline {5.1}实验信号与灵敏度指标}{11}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}国际主要技术路线}{12}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}国内相关平台与发展方向}{12}{subsection.5.3}%
+\contentsline {section}{\numberline {6}研究进展一：格点 QCD}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}格点 QCD 在 $0\nu \beta \beta $ 中的角色}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}从弱哈密顿量到强子振幅}{13}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}由欧氏关联函数提取矩阵元}{14}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}数值结果、限制与物理意义}{15}{subsection.6.4}%
+\contentsline {section}{\numberline {7}研究进展二：手征 EFT 到 N$^2$LO}{16}{section.7}%
+\contentsline {subsection}{\numberline {7.1}为什么需要手征 EFT}{16}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}N$^2$LO 工作的目标与对象}{17}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}N$^2$LO 半衰期公式}{17}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}LO 长程项与 LO 短程项}{18}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}N$^2$LO ultrasoft 项}{18}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}N$^2$LO loop 项}{18}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Table 1 的数值结果}{19}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Ultrasoft 与 non-closure correction}{20}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}物理意义与总结}{21}{subsection.7.9}%
+\contentsline {section}{\numberline {8}研究进展三：MR-CDFT 多机制 NME}{21}{section.8}%
+\contentsline {subsection}{\numberline {8.1}研究目标与动机}{21}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}理论框架：三种机制与组合NME}{21}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}MR-CDFT 方法及其优势}{23}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}主要结论与意义}{23}{subsection.8.4}%
+\contentsline {section}{\numberline {9}当前关键问题与展望}{26}{section.9}%
+\contentsline {subsection}{\numberline {9.1}实验侧：从排除极限走向发现灵敏度}{26}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}理论侧：核矩阵元与低能常数}{26}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}机制判别：发现之后仍需解释}{27}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}未来展望}{27}{subsection.9.4}%
+\contentsline {section}{\numberline {10}结论}{28}{section.10}%
