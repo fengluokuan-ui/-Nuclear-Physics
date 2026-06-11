@@ -11,18 +11,25 @@
 \contentsline {subsection}{\numberline {3.4}与其他质量观测量的关系}{8}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}机制解释的谨慎性}{8}{subsection.3.5}%
 \contentsline {section}{\numberline {4}半衰期公式与核矩阵元}{8}{section.4}%
-\contentsline {section}{\numberline {5}实验研究现状}{8}{section.5}%
-\contentsline {section}{\numberline {6}研究进展一：格点 QCD}{8}{section.6}%
-\contentsline {section}{\numberline {7}研究进展二：手征 EFT 到 N$^2$LO}{8}{section.7}%
-\contentsline {subsection}{\numberline {7.1}为什么需要手征 EFT}{8}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}N$^2$LO 工作的目标与对象}{9}{subsection.7.2}%
-\contentsline {subsection}{\numberline {7.3}N$^2$LO 半衰期公式}{9}{subsection.7.3}%
-\contentsline {subsection}{\numberline {7.4}LO 长程项与 LO 短程项}{10}{subsection.7.4}%
-\contentsline {subsection}{\numberline {7.5}N$^2$LO ultrasoft 项}{10}{subsection.7.5}%
-\contentsline {subsection}{\numberline {7.6}N$^2$LO loop 项}{11}{subsection.7.6}%
-\contentsline {subsection}{\numberline {7.7}Table 1 的数值结果}{11}{subsection.7.7}%
-\contentsline {subsection}{\numberline {7.8}Ultrasoft 与 non-closure correction}{12}{subsection.7.8}%
-\contentsline {subsection}{\numberline {7.9}物理意义与总结}{13}{subsection.7.9}%
-\contentsline {section}{\numberline {8}研究进展三：MR-CDFT 多机制 NME}{13}{section.8}%
-\contentsline {section}{\numberline {9}当前关键问题与展望}{13}{section.9}%
-\contentsline {section}{\numberline {10}结论}{13}{section.10}%
+\contentsline {subsection}{\numberline {4.1}标准半衰期公式与有效Majorana质量}{8}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}核矩阵元的复杂结构}{9}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}核矩阵元：从基本输入到主要瓶颈}{9}{subsection.4.3}%
+\contentsline {section}{\numberline {5}实验研究现状}{10}{section.5}%
+\contentsline {section}{\numberline {6}研究进展一：格点 QCD}{10}{section.6}%
+\contentsline {section}{\numberline {7}研究进展二：手征 EFT 到 N$^2$LO}{10}{section.7}%
+\contentsline {subsection}{\numberline {7.1}为什么需要手征 EFT}{10}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}N$^2$LO 工作的目标与对象}{11}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}N$^2$LO 半衰期公式}{11}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}LO 长程项与 LO 短程项}{12}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}N$^2$LO ultrasoft 项}{12}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}N$^2$LO loop 项}{12}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Table 1 的数值结果}{13}{subsection.7.7}%
+\contentsline {subsection}{\numberline {7.8}Ultrasoft 与 non-closure correction}{14}{subsection.7.8}%
+\contentsline {subsection}{\numberline {7.9}物理意义与总结}{15}{subsection.7.9}%
+\contentsline {section}{\numberline {8}研究进展三：MR-CDFT 多机制 NME（Ding et al. 2024）}{15}{section.8}%
+\contentsline {subsection}{\numberline {8.1}研究目标与动机}{15}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}理论框架：三种机制与组合NME}{15}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}MR-CDFT 方法及其优势}{16}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}主要结论与意义}{16}{subsection.8.4}%
+\contentsline {section}{\numberline {9}当前关键问题与展望}{17}{section.9}%
+\contentsline {section}{\numberline {10}结论}{17}{section.10}%
