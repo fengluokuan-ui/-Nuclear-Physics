@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.22)  11 JUN 2026 16:22
+This is XeTeX, Version 3.141592653-2.6-0.999998 (TeX Live 2026) (preloaded format=xelatex 2026.5.22)  11 JUN 2026 16:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -977,10 +977,7 @@ File: figures/fig2_light_nu_exchange_crop.png Graphic file (type bmp)
  [6]
 File: figures/fig_review_mbb_NO_IO.png Graphic file (type bmp)
 <figures/fig_review_mbb_NO_IO.png>
- [7] [8] [9]
-File: figures/eq_eft_half.png Graphic file (type bmp)
-<figures/eq_eft_half.png>
- [10]
+ [7] [8] [9] [10]
 File: figures/eft_fig1_running_crop.png Graphic file (type bmp)
 <figures/eft_fig1_running_crop.png>
 File: figures/eft_table1_crop.png Graphic file (type bmp)
@@ -998,12 +995,12 @@ Package rerunfilecheck Info: File `nuclear-physics.out' has not changed.
 (rerunfilecheck)             Checksum: AC1F5C8F90857F5E0894B8B2CBEB66C7;3959.
  ) 
 Here is how much of TeX's memory you used:
- 18627 strings out of 468168
- 396069 string characters out of 5436524
- 827335 words of memory out of 5000000
- 47076 multiletter control sequences out of 15000+600000
+ 18615 strings out of 468168
+ 395766 string characters out of 5436524
+ 827231 words of memory out of 5000000
+ 47065 multiletter control sequences out of 15000+600000
  650157 words of font info for 150 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 93i,11n,111p,605b,476s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 93i,11n,111p,605b,474s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on nuclear-physics.pdf (14 pages).
