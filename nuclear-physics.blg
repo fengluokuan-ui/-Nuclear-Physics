@@ -5,24 +5,24 @@ The style file: unsrt.bst
 Database file #1: nuclear-physicsNotes.bib
 You've used 4 entries,
             1791 wiz_defined-function locations,
-            478 strings with 4219 characters,
-and the built_in function-call counts, 973 in all, are:
+            479 strings with 4390 characters,
+and the built_in function-call counts, 1022 in all, are:
 = -- 88
-> -- 37
+> -- 50
 < -- 0
-+ -- 14
-- -- 10
-* -- 76
-:= -- 162
++ -- 18
+- -- 14
+* -- 84
+:= -- 173
 add.period$ -- 12
 call.type$ -- 4
 change.case$ -- 4
 chr.to.int$ -- 0
 cite$ -- 4
 duplicate$ -- 36
-empty$ -- 96
-format.name$ -- 10
-if$ -- 207
+empty$ -- 95
+format.name$ -- 14
+if$ -- 215
 int.to.chr$ -- 0
 int.to.str$ -- 4
 missing$ -- 4
@@ -32,9 +32,9 @@ pop$ -- 4
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 13
+skip$ -- 14
 stack$ -- 0
-substring$ -- 95
+substring$ -- 92
 swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0

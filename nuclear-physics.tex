@@ -3,19 +3,23 @@
 \usepackage[a4paper,margin=2.4cm]{geometry}
 \usepackage{amsmath,amssymb,bm}
 \usepackage{booktabs}
+\usepackage{enumitem}
 \usepackage{graphicx}
+\usepackage{tabularx}
 \usepackage{hyperref}
 \usepackage{physics}
 \usepackage{setspace}
 \usepackage{caption}
+
+\graphicspath{{figures/}}
 
 \hypersetup{
 	colorlinks=true,
 	linkcolor=black,
 	citecolor=blue,
 	urlcolor=blue,
-	pdftitle={无中微子双\texorpdfstring{$\beta$}{beta}衰变课程论文},
-	pdfauthor={姓名}
+	pdftitle={无中微子双beta衰变课程论文},
+	pdfauthor={原子核物理大作业}
 }
 
 \title{无中微子双\texorpdfstring{$\beta$}{beta}衰变}
@@ -27,10 +31,10 @@
 \maketitle
 
 \begin{abstract}
-请在此处填写摘要。建议用一段话概括研究背景、核心问题、主要方法和结论。
+无中微子双贝塔衰变（$0\nu\beta\beta$）是检验轻子数破坏和中微子 Majorana 性质的重要稀有核过程。本文按课程汇报提纲给出论文结构，并重点展开本人负责的三个部分：双贝塔衰变的基本物理、Majorana 中微子与有效 Majorana 质量、以及手征有效场论到 N$^2$LO 的核矩阵元修正。首先，本文从偶偶核质量关系和轻子数计数出发，说明 $2\nu\beta\beta$ 与 $0\nu\beta\beta$ 的本质区别，并讨论实验中连续谱和 $Q_{\beta\beta}$ 处窄峰的信号差异。其次，本文说明 Dirac 与 Majorana 中微子的对称性差别，给出有效质量 $m_{\beta\beta}$ 的定义及其对质量排序和 Majorana 相位的依赖。最后，本文结合近期手征 EFT 文献，详细讨论 $0\nu\beta\beta$ 核矩阵元从 leading order 到 N$^2$LO 的系统补全，包括长程项、短程接触项、超软中微子贡献和环图贡献，并说明 N$^2$LO 修正达到约 $5$--$15\%$，对未来半衰期解释不可忽略。
 \end{abstract}
 
-\noindent\textbf{关键词：}关键词1；关键词2；关键词3；关键词4
+\noindent\textbf{关键词：}无中微子双贝塔衰变；轻子数破坏；Majorana 中微子；有效 Majorana 质量；手征有效场论；N$^2$LO
 
 \tableofcontents
 
@@ -39,78 +43,388 @@
 
 \section{引言}
 
-请在此处介绍选题背景、研究意义、国内外研究现状，以及本文的组织结构。
+\section{双贝塔衰变的基本物理}
 
-\section{物理背景与研究意义}
+\subsection{双贝塔衰变为什么会发生}
 
-\subsection{为什么无中微子双\texorpdfstring{$\beta$}{beta}衰变重要}
-
-请在此处说明该过程与 Majorana 中微子、轻子数不守恒、中微子质量等问题的关系。
-
-\subsection{候选核素}
-
-请在此处介绍常见候选核素、选择标准以及它们在实验中的特点。
-
-\section{理论机制}
-
-\subsection{轻 Majorana 中微子交换机制}
-
-请在此处写理论机制，并根据需要插入公式。下面保留了一个常用公式模板：
+普通 $\beta^-$ 衰变可写为
 \begin{equation}
-	\left[T_{1/2}^{0\nu}\right]^{-1} = G^{0\nu}(Q,Z)\,\left|M^{0\nu}\right|^2\,\left|\frac{m_{\beta\beta}}{m_e}\right|^2,
+	(A,Z)\rightarrow(A,Z+1)+e^-+\bar{\nu}_e .
+\end{equation}
+从核素图像看，它使质量数 $A$ 不变、电荷数 $Z$ 增加 1。若对某个固定 $A$ 的同量异位素链，母核 $(A,Z)$ 到中间奇奇核 $(A,Z+1)$ 的单贝塔衰变在能量上不允许，或由于角动量、宇称和核结构选择规则被强烈抑制，而母核到另一个偶偶核 $(A,Z+2)$ 的总质量差为正，则双贝塔衰变可以作为二阶弱过程发生：
+\begin{equation}
+	(A,Z)\rightarrow(A,Z+2)+2e^-+2\bar{\nu}_e .
+	\label{eq:2nubb}
+\end{equation}
+这就是标准模型允许的双中微子双贝塔衰变（$2\nu\beta\beta$）。
+
+这类过程常发生在偶偶核之间，原因是核配对效应会使偶偶核相对更稳定，而相邻奇奇核质量较高。以 $A=136$ 同量异位素链为例，$^{136}$Xe 到 $^{136}$Cs 的单贝塔路径不易发生，而到 $^{136}$Ba 的双贝塔路径可以能量允许。图 \ref{fig:a136} 中的质量关系直观展示了这一点。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.72\textwidth]{fig6_A136_mass_crop.png}
+	\caption{$A=136$ 同量异位素质量关系示意。偶偶核相对更稳定，中间奇奇核质量较高，使单贝塔路径受阻而双贝塔路径可发生。图片来自课程 PPT 资料，原图取自综述文献\cite{GomezCadenas2023}。}
+	\label{fig:a136}
+\end{figure}
+
+从弱相互作用阶数看，$2\nu\beta\beta$ 可以理解为两个单贝塔顶点在同一原子核内同时发生。每个顶点满足标准模型带电流相互作用，整个过程保持总轻子数守恒。由于末态有两个电子和两个反中微子，四体相空间使该过程极其稀有，典型半衰期可达 $10^{18}$--$10^{21}$ 年量级，但它已经在多个核素中被观测到\cite{GomezCadenas2023}。因此，$2\nu\beta\beta$ 本身不是新物理信号，却为理解核波函数和检验双贝塔核模型提供了重要基准。
+
+\subsection{\texorpdfstring{$2\nu\beta\beta$ 与 $0\nu\beta\beta$}{2nu beta beta 与 0nu beta beta} 的关键区别}
+
+无中微子双贝塔衰变写作
+\begin{equation}
+	(A,Z)\rightarrow(A,Z+2)+2e^- .
+	\label{eq:0nubb}
+\end{equation}
+它与式 \eqref{eq:2nubb} 的形式差别只是少了两个反中微子，但物理含义完全不同：$2\nu\beta\beta$ 是标准模型允许的轻子数守恒过程，而 $0\nu\beta\beta$ 是轻子数破坏过程。
+
+取轻子数约定
+\begin{equation}
+	L(e^-)=+1,\qquad L(\nu_e)=+1,\qquad L(\bar{\nu}_e)=-1,
+\end{equation}
+原子核本身轻子数为零。于是对双中微子模式，
+\begin{equation}
+	L_f=2L(e^-)+2L(\bar{\nu}_e)=2-2=0=L_i,
+\end{equation}
+总轻子数守恒。对无中微子模式，
+\begin{equation}
+	L_f=2L(e^-)=2,\qquad L_i=0,
+\end{equation}
+所以
+\begin{equation}
+	\Delta L=L_f-L_i=+2 .
+\end{equation}
+文献中常写作 $|\Delta L|=2$，即轻子数破坏两个单位。这里的 ``2'' 来自末态有两个电子，每个电子都带 $+1$ 轻子数；在标准 $2\nu\beta\beta$ 中，两个反中微子的 $-2$ 正好抵消两个电子的 $+2$，而 $0\nu\beta\beta$ 没有这一抵消项。
+
+因此，$0\nu\beta\beta$ 一旦被观测到，就不只是发现一种新的核衰变模式，而是直接说明自然界存在轻子数破坏过程。这一点是它在粒子物理和宇宙学中受到重视的根本原因：轻子数破坏与 Majorana 质量、跷跷板机制以及早期宇宙轻子生成机制都有潜在联系。
+
+\subsection{实验信号：连续谱与单能峰}
+
+实验不能直接 ``看见没有中微子''，真正测量的是两个电子的能量沉积。对 $2\nu\beta\beta$，两个反中微子会带走不可见能量，因此两个电子的总能量形成从 0 到 $Q_{\beta\beta}$ 的连续谱：
+\begin{equation}
+	0<E_{e1}+E_{e2}<Q_{\beta\beta}.
+\end{equation}
+对 $0\nu\beta\beta$，末态只有两个电子，理想情况下它们几乎带走全部衰变能：
+\begin{equation}
+	E_{e1}+E_{e2}\simeq Q_{\beta\beta}.
+\end{equation}
+因此，$0\nu\beta\beta$ 的实验信号是在 $Q_{\beta\beta}$ 附近的 ROI 中出现一个窄峰。探测器能量分辨率越好，该峰越窄，越容易和 $2\nu\beta\beta$ 谱尾以及环境本底区分。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.72\textwidth]{spectrum.png}
+	\caption{$2\nu\beta\beta$ 连续谱与 $0\nu\beta\beta$ 在 $Q_{\beta\beta}$ 处窄峰的示意图。图片来自课程 PPT。}
+	\label{fig:spectrum}
+\end{figure}
+
+实际实验中，峰会被能量分辨率展宽，本底来源包括天然放射性链中的 $\gamma$ 射线、表面 $\alpha$ 污染、宇宙线诱发事件、探测器材料放射性以及 $2\nu\beta\beta$ 连续谱尾部。高 $Q_{\beta\beta}$ 核素通常更有利，因为它们的相空间因子较大，且峰位可能避开部分天然 $\gamma$ 本底。候选核素还需要考虑天然丰度、同位素富集成本、探测器制备难度和 NME 理论可靠性。当前常见候选核素包括 $^{76}$Ge、$^{82}$Se、$^{100}$Mo、$^{130}$Te 和 $^{136}$Xe。
+
+\subsection{本部分小结}
+
+双贝塔衰变的基本物理可以概括为三点。第一，双贝塔衰变发生在某些单贝塔路径受阻而双贝塔路径能量允许的偶偶核中。第二，$2\nu\beta\beta$ 是标准模型允许的轻子数守恒过程，而 $0\nu\beta\beta$ 因末态没有两个反中微子而具有 $\Delta L=2$。第三，实验上 $2\nu\beta\beta$ 表现为电子总能量连续谱，$0\nu\beta\beta$ 表现为 $Q_{\beta\beta}$ 附近窄峰。这些内容构成后续讨论 Majorana 中微子和有效质量的物理基础。
+
+\section{Majorana 中微子与有效质量}
+
+\subsection{Dirac 与 Majorana 问题}
+
+中微子振荡实验已经证明至少两个中微子质量本征态具有非零质量，但振荡实验只能测量质量平方差和混合角，不能回答中微子是 Dirac 粒子还是 Majorana 粒子。对带电费米子来说，粒子和反粒子必然不同；但中微子不带电，因此原则上可以满足 Majorana 条件
+\begin{equation}
+	\nu=\nu^c,
+\end{equation}
+即中微子等同于自身的电荷共轭场。
+
+Dirac 质量项需要同时存在左手和右手中微子场，并保持总轻子数守恒；Majorana 质量项则把中微子场与其电荷共轭场相连，会破坏轻子数两个单位。由于 $0\nu\beta\beta$ 正是 $\Delta L=2$ 过程，它天然与 Majorana 质量问题相联系。
+
+在轻 Majorana 中微子交换机制中，两个弱顶点之间由虚中微子线连接。一个中子变成质子并放出电子和虚中微子；该虚中微子被另一个中子吸收，使其也变成质子并放出第二个电子。若中微子是 Majorana 粒子，产生的反中微子可以被视作中微子被另一个顶点吸收。由于标准弱相互作用只耦合左手中微子和右手反中微子，这条内部线需要手征翻转，而手征翻转由中微子质量提供。因此轻中微子交换振幅与中微子质量成正比。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.62\textwidth]{fig2_light_nu_exchange_crop.png}
+	\caption{轻 Majorana 中微子交换机制示意图。两个弱顶点由虚 Majorana 中微子传播子连接，手征翻转使振幅与中微子质量相关。图片来自课程 PPT，原图取自 Engel 与 Menendez 综述\cite{Engel2017}。}
+	\label{fig:lightnu}
+\end{figure}
+
+更一般地，在标准模型有效场论中，Majorana 质量可由五维 Weinberg 算符产生：
+\begin{equation}
+	\mathcal{L}_5=
+	\frac{c_{\alpha\beta}}{\Lambda}
+	\left(\overline{L_\alpha^c}\tilde{H}^{\ast}\right)
+	\left(\tilde{H}^{\dagger}L_\beta\right)+{\rm h.c.},
+\end{equation}
+其中 $L_\alpha$ 是轻子双重态，$H$ 是 Higgs 双重态，$\Lambda$ 是新物理尺度。电弱对称性破缺后，
+\begin{equation}
+	(m_\nu)_{\alpha\beta}\sim \frac{c_{\alpha\beta}v^2}{\Lambda}.
+\end{equation}
+这说明即便新物理尺度远高于核物理能区，也可能通过低能轻子数破坏算符在 $0\nu\beta\beta$ 中留下可观测效应。
+
+\subsection{有效 Majorana 质量的定义}
+
+在标准轻中微子交换机制下，粒子物理部分通常由有效 Majorana 质量控制：
+\begin{equation}
+	m_{\beta\beta}
+	=
+	\left|\sum_{i=1}^{3}U_{ei}^{2}m_i\right|
+	=
+	|(m_\nu)_{ee}|.
+	\label{eq:mbb}
+\end{equation}
+其中 $m_i$ 是三个中微子质量本征态的质量，$U_{ei}$ 是 PMNS 混合矩阵第一行元素，表示电子味中微子在第 $i$ 个质量本征态中的混合振幅。这个量等于中微子质量矩阵在电子味基下的 $(e,e)$ 元素的模。
+
+需要注意，式 \eqref{eq:mbb} 中是 $U_{ei}^2$，不是 $|U_{ei}|^2$。因此不同质量本征态的贡献是相干叠加，复相位不能被消去。把 Majorana 相位显式写出，有
+\begin{equation}
+	m_{\beta\beta}
+	=
+	\left|
+	m_1c_{12}^2c_{13}^2
+	+m_2s_{12}^2c_{13}^2e^{i\alpha_{21}}
+	+m_3s_{13}^2e^{i\alpha_{31}}
+	\right|.
+	\label{eq:mbb-expanded}
+\end{equation}
+这里 $s_{ij}=\sin\theta_{ij}$，$c_{ij}=\cos\theta_{ij}$，$\alpha_{21}$ 和 $\alpha_{31}$ 是 Majorana 相位。振荡实验可以测量混合角和质量平方差，但不能测量 Majorana 相位，也不能单独确定最轻中微子质量。因此 $m_{\beta\beta}$ 不是一个固定数值，而是一条随最轻质量和相位变化的允许带。
+
+\subsection{质量排序与相位抵消}
+
+有效质量的大小强烈依赖质量排序。正常排序（NO）满足
+\begin{equation}
+	m_1<m_2<m_3,
+\end{equation}
+其中 $m_1$ 最轻。此时三个质量本征态对 $m_{\beta\beta}$ 的贡献可能发生明显相消，尤其当 Majorana 相位取特定值时，$m_{\beta\beta}$ 可以很小，甚至在理论上接近零。倒置排序（IO）满足
+\begin{equation}
+	m_3<m_1<m_2,
+\end{equation}
+其中 $m_1$ 和 $m_2$ 较重且电子味成分较大，通常会给出十几 meV 量级的下界，不容易完全相消。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.74\textwidth]{fig_review_mbb_NO_IO.png}
+	\caption{$m_{\beta\beta}$ 随最轻中微子质量变化的允许区域。红色和绿色带分别对应正常排序与倒置排序，灰色区域表示实验限制。图片取自综述文献图像资料\cite{GomezCadenas2023}。}
+	\label{fig:mbb}
+\end{figure}
+
+图 \ref{fig:mbb} 展示了 $m_{\beta\beta}$ 与最轻中微子质量的关系。横轴是最轻质量，纵轴是有效 Majorana 质量。带状区域的宽度来自未知 Majorana 相位和振荡参数误差。若未来实验灵敏度覆盖倒置排序区域而仍无信号，则可能意味着：中微子是 Dirac 粒子；或中微子是 Majorana 粒子但质量排序为正常且相位抵消强；或 $0\nu\beta\beta$ 的实际机制比单纯轻中微子交换更复杂。
+
+\subsection{与其他质量观测量的关系}
+
+$m_{\beta\beta}$ 不是唯一的中微子质量观测量。直接 $\beta$ 衰变实验（如 KATRIN）测量的是
+\begin{equation}
+	m_\beta=
+	\left(\sum_i |U_{ei}|^2m_i^2\right)^{1/2}.
+\end{equation}
+宇宙学观测约束的是质量和
+\begin{equation}
+	\Sigma=m_1+m_2+m_3.
+\end{equation}
+这两个量都不依赖 Majorana 相位，也不直接检验轻子数破坏。相比之下，$m_{\beta\beta}$ 对 Majorana 相位敏感，并且只有在 $0\nu\beta\beta$ 这类 $\Delta L=2$ 过程中出现。因此，$0\nu\beta\beta$、直接质量测量、宇宙学约束和振荡实验是互补的。
+
+\subsection{机制解释的谨慎性}
+
+如果未来观测到 $0\nu\beta\beta$，它将强烈说明中微子具有 Majorana 性质。Schechter--Valle 黑箱定理表明，只要存在 $0\nu\beta\beta$，原则上就会诱导 Majorana 质量项\cite{SchechterValle1982}。但这并不意味着实际衰变率一定完全由轻中微子交换主导。右手流、重 Majorana 中微子、标量交换、超对称粒子或其他短程轻子数破坏机制也可能产生同样的两个电子末态。
+
+因此，在轻中微子交换主导的假设下，半衰期可以转化为 $m_{\beta\beta}$；但若存在多个机制相干叠加，单个核素的半衰期不足以唯一确定粒子物理来源。未来若出现信号，还需要多核素测量、电子角关联、单电子能谱和多机制 NME 计算共同参与机制判别。
+
+\section{半衰期公式与核矩阵元}
+
+\section{实验研究现状}
+
+\section{研究进展一：格点 QCD}
+
+\section{研究进展二：手征 EFT 到 N\texorpdfstring{$^2$}{2}LO}
+
+\subsection{为什么需要手征 EFT}
+
+实验测量或限制的是 $0\nu\beta\beta$ 半衰期，而半衰期与中微子质量参数之间需要核矩阵元连接。在轻 Majorana 中微子交换主导的标准情形中，通常有
+\begin{equation}
+	\left(T_{1/2}^{0\nu}\right)^{-1}
+	=
+	G^{0\nu}g_A^4|M^{0\nu}|^2
+	\left|\frac{m_{\beta\beta}}{m_e}\right|^2 .
 	\label{eq:half-life}
 \end{equation}
-如果你需要给出有效 Majorana 质量定义，可以继续使用下式：
+这里 $G^{0\nu}$ 是相空间因子，$g_A$ 是轴矢耦合常数，$M^{0\nu}$ 是核矩阵元。相空间因子相对可控，而 $M^{0\nu}$ 依赖复杂核多体波函数和弱流算符，是把半衰期解释为 $m_{\beta\beta}$ 的主要理论瓶颈。
+
+传统 NME 计算主要关注轻中微子交换导致的长程 neutrino potential。对这一部分，常写成
 \begin{equation}
-	m_{\beta\beta} = \left|\sum_i U_{ei}^2 m_i\right|
+	M^{0\nu}
+	=
+	M_{GT}^{0\nu}
+	-
+	\left(\frac{g_V}{g_A}\right)^2M_F^{0\nu}
+	+M_T^{0\nu},
 \end{equation}
-请在此处解释公式中各物理量的意义，并说明其物理图像。
+其中 $M_{GT}$、$M_F$ 和 $M_T$ 分别是 Gamow--Teller、Fermi 和 tensor 分量。这种分解说明 NME 不是单一常数，而包含自旋、同位旋、张量结构和核内动量传递。
 
-\subsection{其他可能的新物理机制}
+手征有效场论（chiral effective field theory, $\chi$EFT）的作用，是把低能强相互作用、弱流和轻子数破坏算符放在同一个系统展开中。核内 $0\nu\beta\beta$ 的典型动量传递约为
+\begin{equation}
+	q\sim100~{\rm MeV},
+\end{equation}
+低于手征破缺尺度
+\begin{equation}
+	\Lambda_\chi\sim1~{\rm GeV}.
+\end{equation}
+因此可以按小参数 $q/\Lambda_\chi$ 组织算符。EFT 的价值不是简单给一个新数值，而是回答：哪些项应该在同一精度下一起保留，哪些过去被忽略的项应视为同阶修正，遗漏项的不确定性大概有多大。
 
-请在此处补充其他可能机制，例如右手流、重中微子交换或其他超出标准模型情形。
+\subsection{N\texorpdfstring{$^2$}{2}LO 工作的目标与对象}
 
-\section{核矩阵元问题}
+Castillo、Jokiniemi、Soriano 和 Menendez 的论文 \textit{Neutrinoless $\beta\beta$ decay nuclear matrix elements complete up to N2LO in heavy nuclei} 系统计算了重核中 $0\nu\beta\beta$ NME 完整到 next-to-next-to-leading order（N$^2$LO）的贡献\cite{Castillo2025}。该文研究的核素包括
+\begin{equation}
+	^{76}{\rm Ge},\quad ^{82}{\rm Se},\quad ^{100}{\rm Mo},\quad
+	^{130}{\rm Te},\quad ^{136}{\rm Xe},
+\end{equation}
+这些都是当前或下一代实验关注的主要候选核。
 
-请在此处讨论核矩阵元的理论计算方法、主要不确定性来源及其对实验解释的影响。
+文献同时使用两类典型核多体方法：
+\begin{itemize}[leftmargin=2em]
+	\item pnQRPA，即 proton--neutron quasiparticle random phase approximation，适合描述电荷交换中间态，模型空间较大，但对粒子--粒子相互作用参数等较敏感；
+	\item NSM，即 nuclear shell model，在有限价空间中能够较充分处理核子关联，但模型空间较小，高能轨道可能缺失。
+\end{itemize}
+两种方法并用的意义在于：如果某个 EFT 修正在两种核结构截断下表现一致，则其结果更稳健；如果符号或大小显著不同，则说明该修正对中间态结构或模型空间处理敏感。
 
-\section{实验进展}
+\subsection{N\texorpdfstring{$^2$}{2}LO 半衰期公式}
 
-请在此处整理代表性实验、实验方法、当前半衰期下限以及未来计划。
+该文采用的核心公式为
+\begin{equation}
+	\left(t_{1/2}^{0\nu}\right)^{-1}
+	=
+	G^{0\nu}g_A^4
+	\frac{m_{\beta\beta}^2}{m_e^2}
+	\left|
+	M_L^{0\nu}
+	+M_S^{0\nu}
+	+M_{\rm usoft}^{0\nu}
+	+M_{\rm loop}^{0\nu}
+	\right|^2 .
+	\label{eq:n2lo-half-life}
+\end{equation}
+其中各项含义如下：
+\begin{itemize}[leftmargin=2em]
+	\item $M_L^{0\nu}$：LO 长程轻中微子交换项，是传统 NME 的主体；
+	\item $M_S^{0\nu}$：LO 短程接触项，描述两个弱顶点在短距离上发生时的贡献；
+	\item $M_{\rm usoft}^{0\nu}$：N$^2$LO 超软中微子贡献，对中间核态能量显式敏感；
+	\item $M_{\rm loop}^{0\nu}$：N$^2$LO 环图贡献，包括不能吸收到核子形式因子中的部分。
+\end{itemize}
 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.86\textwidth]{eq_eft_half.png}
+	\caption{手征 EFT 到 N$^2$LO 的半衰期公式。四类 NME 在振幅中相干相加，因此符号和抵消均重要。图片来自课程 PPT。}
+	\label{fig:eft-half}
+\end{figure}
+
+这条公式有两个要点。第一，四类 NME 是在振幅中相干相加，而不是把 LO 结果乘以一个经验修正因子，所以不同项之间可能相长或相消。第二，在该文采用的 $\chi$EFT power counting 中，LO 之后下一批新的独立 $0\nu\beta\beta$ NME 贡献出现在 N$^2$LO，因此公式中没有单独的 NLO NME 项。这不是说所有 EFT 问题都没有 NLO，而是该轻中微子交换机制在这篇文献的计数下如此。
+
+\subsection{LO 长程项与 LO 短程项}
+
+LO 长程项对应通常的 light-neutrino exchange neutrino potential，可写为
+\begin{equation}
+	M_L^{0\nu}
+	=
+	M_{GT}^{0\nu}
+	-
+	\left(\frac{g_V}{g_A}\right)^2M_F^{0\nu}
+	+M_T^{0\nu}.
+\end{equation}
+其中 Gamow--Teller 项通常最重要，Fermi 项由同位旋结构决定，tensor 项一般较小但不能先验忽略。传统 NME 计算的核心通常就是这个长程项及其相关的核模型处理。
+
+短程项 $M_S^{0\nu}$ 则来自两个弱顶点距离很近时的接触贡献。早期 power counting 中，短程项曾被视为较高阶修正；但重整化一致性表明，为使理论可重整化，相关短程 NME 需要提升到 LO。它的强度由低能常数如 $g_{NN\nu}$ 控制，而这些常数不能直接从普通单贝塔衰变数据中确定，需要格点 QCD、轻核从头算或 EFT 匹配提供约束。
+
+这说明 ``短程'' 并不等于 ``数值上很小''。在 Castillo 等人的结果中，$M_S^{0\nu}$ 在若干核素中达到 $M_L^{0\nu}$ 的相当比例，特别是在 pnQRPA 中更明显。因此，只保留传统长程项会低估理论结构的复杂性。
+
+\subsection{N\texorpdfstring{$^2$}{2}LO ultrasoft 项}
+
+N$^2$LO 的第一类新增贡献来自 ultrasoft neutrinos。这里的 ``ultrasoft'' 指虚中微子动量远低于核 Fermi 动量。与 LO 长程项常用闭合近似不同，ultrasoft 项显式依赖中间核的 $1^+$ 态能量。它的结构使得中间态谱和 Gamow--Teller 强度分布直接影响 NME。
+
+这点非常重要，因为它解释了为什么 pnQRPA 和 NSM 对 ultrasoft 项给出不同符号。NSM 在有限价空间中处理关联较充分，但可能缺少部分高能轨道；pnQRPA 模型空间较大，适合电荷交换中间态，但对参数和高能贡献较敏感。ultrasoft 项正好放大了这种中间态处理差异。
+
+文献中的 running sum 图（图 \ref{fig:running}）显示，$^{76}$Ge 的 ultrasoft NME 在较低中间态激发能区域，两种方法趋势较接近；但在约 $8$--$13$ MeV 区间，pnQRPA 出现显著抵消和符号变化，而 NSM 没有相同行为。这说明 N$^2$LO 差异不是简单的整体归一化差异，而来自中间态累积方式。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.82\textwidth]{eft_fig1_running_crop.png}
+	\caption{$^{76}$Ge 的 total ultrasoft NME 随中间 $1^+$ 态激发能的 running sum。pnQRPA 与 NSM 在 $8$--$13$ MeV 区间出现明显不同。图片来自课程 PPT，原图取自 Castillo 等\cite{Castillo2025}。}
+	\label{fig:running}
+\end{figure}
+
+\subsection{N\texorpdfstring{$^2$}{2}LO loop 项}
+
+N$^2$LO 的另一类贡献来自 loop diagrams。它们可分解为矢量--矢量（VV）、轴矢--轴矢（AA）和接触项（CT）等部分。不同 loop 分量之间可以相互抵消，例如某些核素中 VV 项与 AA、CT 项符号相反。由于 loop 项具有较强短程性质，它对 regulator、短程关联和重整化尺度较敏感。
+
+这类贡献通常小于 LO 长程项，但仍可达到几个百分点到十几个百分点。更重要的是，它揭示了传统 ``核子形式因子修正'' 不能吸收全部 N$^2$LO 信息，部分环图必须作为独立 NME 计算。对未来高精度解释而言，loop 项的不确定性需要与短程低能常数、短程关联处理和多体模型误差一起估计。
+
+\subsection{Table 1 的数值结果}
+
+Castillo 等人的 Table 1 给出各核素在 pnQRPA 和 NSM 中的 LO 长程、LO 短程、N$^2$LO ultrasoft 和 N$^2$LO loop-soft 中心值及范围。图 \ref{fig:eft-table} 是课程 PPT 中截取的表格。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.9\textwidth]{eft_table1_crop.png}
+	\caption{EFT 文献 Table 1 中的 NME 结果。表中列出 LO 长程项、LO 短程项、N$^2$LO total ultrasoft 和 N$^2$LO loop-soft。图片来自课程 PPT，原图取自 Castillo 等\cite{Castillo2025}。}
+	\label{fig:eft-table}
+\end{figure}
+
+为了便于讨论，选取 $^{76}$Ge 和 $^{136}$Xe 的中心值列于表 \ref{tab:n2lo-examples}。
 \begin{table}[htbp]
 	\centering
-	\caption{候选核素与实验要点模板表}
-	\begin{tabular}{cccc}
+	\caption{部分核素中 LO 与 N$^2$LO NME 中心值示例\cite{Castillo2025}}
+	\label{tab:n2lo-examples}
+	\begin{tabular}{lcccc}
 		\toprule
-		核素 & 典型实验 & 优势 & 关注点 \\
+		核素与方法 & $M_L$ & $M_S$ & $M_{\rm usoft}$ & $M_{\rm loop,soft}$ \\
 		\midrule
-		请填写 & 请填写 & 请填写 & 请填写 \\
-		请填写 & 请填写 & 请填写 & 请填写 \\
-		请填写 & 请填写 & 请填写 & 请填写 \\
-		请填写 & 请填写 & 请填写 & 请填写 \\
+		$^{76}$Ge, pnQRPA & 5.23 & 2.65 & 0.39 & 0.28 \\
+		$^{76}$Ge, NSM & 3.57 & 0.97 & $-0.29$ & 0.05 \\
+		$^{136}$Xe, pnQRPA & 2.99 & 1.36 & 0.06 & 0.16 \\
+		$^{136}$Xe, NSM & 2.26 & 0.86 & $-0.19$ & 0.05 \\
 		\bottomrule
 	\end{tabular}
 \end{table}
 
-\section{结果讨论与展望}
+从表中可读出三点。第一，$M_L$ 仍然是主导贡献，但 $M_S$ 并不小，尤其在 pnQRPA 中可达到长程项的相当比例。第二，N$^2$LO 项通常小于 LO，但已达到几个百分点到十几个百分点，不适合简单忽略。第三，$M_{\rm usoft}$ 在 pnQRPA 和 NSM 中常出现相反符号，这是该文最重要的发现之一。
 
-请在此处总结理论与实验现状，讨论存在的问题、争议点和未来发展方向。
+以 $^{76}$Ge 为例，若粗略用表中中心值估算 N$^2$LO 相对 LO 的大小，
+\begin{align}
+	{\rm pnQRPA:}\quad
+	\frac{M_{\rm usoft}+M_{\rm loop,soft}}{M_L+M_S}
+	&\simeq
+	\frac{0.39+0.28}{5.23+2.65}
+	\simeq 8.5\%,\\
+	{\rm NSM:}\quad
+	\frac{M_{\rm usoft}+M_{\rm loop,soft}}{M_L+M_S}
+	&\simeq
+	\frac{-0.29+0.05}{3.57+0.97}
+	\simeq -5.3\%.
+\end{align}
+这与文献摘要中的总体结论一致：NSM 中 N$^2$LO 修正中心值约为 $-(5\text{--}10)\%$，pnQRPA 中约为 $+(10\text{--}15)\%$。
+
+\subsection{Ultrasoft 与 non-closure correction}
+
+传统 $0\nu\beta\beta$ NME 计算常用闭合近似，即把中间态能量替换为平均闭合能量。闭合近似之外的修正通常称为 non-closure correction。Castillo 等人比较了 total ultrasoft NME 与 non-closure correction，发现两者量级相近，如图 \ref{fig:nonclosure} 所示。
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.82\textwidth]{eft_fig2_nonclosure_crop.png}
+	\caption{Total ultrasoft NME 与 non-closure correction 的比较。二者量级相近，说明 N$^2$LO ultrasoft 项不是形式上的小修正。图片来自课程 PPT，原图取自 Castillo 等\cite{Castillo2025}。}
+	\label{fig:nonclosure}
+\end{figure}
+
+这一结果的意义在于，它把传统核结构语言和 EFT 语言连接起来。过去 non-closure correction 常被视为核模型技术修正；在 $\chi$EFT 中，ultrasoft neutrino contribution 是按阶数出现的 N$^2$LO 项。二者同量级说明，若未来要实现高精度 NME 计算，不能只停留在闭合近似的 LO neutrino potential，而需要系统纳入 ultrasoft 项。
+
+\subsection{物理意义与总结}
+
+手征 EFT 到 N$^2$LO 的工作表明，现代 $0\nu\beta\beta$ NME 研究正在从 ``模型给一个数'' 转向 ``按 EFT 阶数系统补全算符和误差''。该文的主要结论可以概括为：
+\begin{align}
+	{\rm NSM:}\quad &\Delta_{\rm N^2LO}\sim -(5\text{--}10)\%,\\
+	{\rm pnQRPA:}\quad &\Delta_{\rm N^2LO}\sim +(10\text{--}15)\%.
+\end{align}
+N$^2$LO 修正虽非主导项，但已经达到下一代实验解释不能随意忽略的量级。
+
+更重要的是，pnQRPA 与 NSM 的符号差异说明，不同多体方法之间的差异不只体现在总 NME 大小上，也体现在中间态 running sum 和高阶修正的符号上。未来若要降低理论误差，需要进一步理解中间态谱、短程低能常数、regulator 依赖和两体弱流的影响。对于从实验半衰期提取 $m_{\beta\beta}$ 而言，N$^2$LO 的 $5$--$15\%$ NME 修正会转化为有效质量约束中的系统误差，因此必须纳入严肃的理论误差预算。
+
+\section{研究进展三：MR-CDFT 多机制 NME}
+
+\section{当前关键问题与展望}
 
 \section{结论}
-
-请在此处概括全文的主要观点与结论。
-
-\section*{附：写作提示}
-
-如果你要把这份模板扩展成正式作业，建议优先补充以下内容：
-\begin{enumerate}
-	\item 将封面中的姓名、学号、院系和日期改为你的个人信息；
-	\item 用你自己的正文替换各节中的提示文字；
-	\item 若不需要某个小节或表格，可直接删除；
-	\item 若使用文献引用，请在 .bib 文件中维护你的参考文献条目；
-	\item 编译顺序建议为 XeLaTeX $\to$ BibTeX $\to$ XeLaTeX $\to$ XeLaTeX。
-\end{enumerate}
 
 \bibliographystyle{unsrt}
 \bibliography{nuclear-physicsNotes}
